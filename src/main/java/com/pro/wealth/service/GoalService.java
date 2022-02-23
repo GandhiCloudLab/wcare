@@ -31,7 +31,7 @@ public class GoalService {
     public GoalInfo findInfo(int goalId) {
         LogUtil.log("GoalService  findInfo Started ");
 
-        GoalInfo result = (GoalInfo) wcGoalService.find (goalId);
+        GoalInfo result = (GoalInfo) wcGoalService.findInfo (goalId);
 
         LogUtil.log("GoalService  findInfo Completed : " + result);
 
