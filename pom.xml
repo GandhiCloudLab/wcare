@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.pro</groupId>
-	<artifactId>wealthweb-service</artifactId>
+	<artifactId>wealthplan-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>wealthweb-service</name>
-	<description>Wealth Web Application</description>
+	<name>wealthplan-service</name>
+	<description>Wealth Plan Application</description>
     <packaging>war</packaging>
 
 	<properties>
