@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wcareweb
+  namespace: wcare-ns
+  labels:
+    app: wcare-application
+    subname: wcareweb
+spec:
+  selector:
+    matchLabels:
+      app: wcare-application
+      subname: wcareweb
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: wcare-application
+        subname: wcareweb
+    spec:
+      containers:
+        - name: container-wcareweb
+          image: docker-registry.default.svc:5000/wcare-ns/wcareweb:latest
+          # image: image-registry.openshift-image-registry.svc:5000/wcare-ns/wcareweb:latest
+          # image: "gandhicloudlab/wcareweb:latest"
+          imagePullPolicy: Always
+          ports:
+            - name: my-http
+              containerPort: 9020
+          env:
+            - name: prop.api.server.url.user
+              value: http://wcareuser:9090
+            - name: prop.api.server.url.finance
+              value: http://wcarefinance:9090

@@ -1,0 +1,43 @@
+apiVersion: tekton.dev/v1alpha1
+kind: Pipeline
+metadata:
+  name: pipeline-wcare
+  namespace: wcare-ns
+spec:
+  resources:
+    - name: git-source-repo
+      type: git
+      # default: https://github.com/GandhiCloudLab/wcare-web
+    - name: docker-image-registry
+      type: image
+      # default: image-registry.openshift-image-registry.svc:5000/wcare-ns/wcareweb:latest
+  params:
+    - name: pathToDeploymentFiles
+      default: /workspace/source-repo/deployment/yaml
+  tasks:
+    - name: build
+      taskRef:
+        name: buildah
+        kind: ClusterTask
+      resources:
+        inputs:
+        - name: source
+          resource: git-source-repo
+        outputs:
+        - name: image
+          resource: docker-image-registry
+      params:
+        - name: TLSVERIFY
+          value: "false"
+    - name: deploy
+      taskRef:
+        name: task-deploy
+      runAfter:
+        - build
+      params:
+        - name: pathToDeploymentFiles
+          value: "$(params.pathToDeploymentFiles)"
+      resources:
+        inputs:
+          - name: source-repo
+            resource: git-source-repo
