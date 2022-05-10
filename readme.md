@@ -44,6 +44,8 @@ The detailed screenshots are given in [Screen details....](./readme-screens.md)
 
 1. Make changes to the files anywhere.
 
+Ex: By default it points to the im-memory database, you can point to the external database by updating the file `src/main/resources/application.properties`
+
 2. Run the below command to compile it using maven
 ```
       mvn clean package
