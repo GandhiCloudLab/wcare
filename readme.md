@@ -1,6 +1,6 @@
 # WealthPlan  
 
-## Starting App
+## 1. Starting App
 
 1. Download this repo content as zip
 
@@ -20,7 +20,7 @@ java -jar wealthplan-service-0.0.1-SNAPSHOT.war
 
 Now the application should be starting and running at the port 9020.
 
-## Accessing App
+## 2. Accessing App
 
 To access the applicaiton access the below url in the browser.
 
@@ -36,11 +36,11 @@ eva/eva
 harry/harry
 ```
 
-## Screen Details
+## 3. Screen Details
 
 The detailed screenshots are given in [Screen details....](./readme-screens.md)
 
-## Making Changes to the app
+## 4. Making Changes to the app
 
 1. Make changes to the files anywhere.
 
