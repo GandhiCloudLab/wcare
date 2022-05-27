@@ -2,7 +2,7 @@
 
 <html>
 
-<title>WealthCare Application</title>
+<title>WealthPlan Application</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
@@ -16,7 +16,7 @@
 		  <!-- Header -->
 		  <header class="w3-row w3-xlarge">
 		   <div class="w3-panel w3-cyan">
-			  <h1><b>WealthCare</b></h1>
+			  <h1><b>WealthPlan</b></h1>
 			</div> 
 		  </header>
 	  
