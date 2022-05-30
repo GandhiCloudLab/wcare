@@ -24,10 +24,13 @@ request.getSession().setAttribute("userDisplayText", null);
 		<tr>
 			<td colspan=2><center><font size=4><b> Login </b></font></center></td>
 		</tr>
-
+        <td colspan=2>&nbsp;</td>
 		<tr>
 			<td width="100">&nbsp;&nbspLogin Id:</td>
 			<td><input type="text" size=25 name="loginId"></td>
+		</tr>
+		<tr>
+			<td colspan=2>&nbsp;</td>
 		</tr>
 		<tr>
 			<td>&nbsp&nbspPassword:</td>
@@ -37,7 +40,13 @@ request.getSession().setAttribute("userDisplayText", null);
 			<td colspan=2>&nbsp;</td>
 		</tr>	
 		<tr>
-			<td colspan=2 align="center"><input type="Reset" value="Clear" ><input type="submit" onclick="return check(this.form)" value="Login"></td>
+			<td colspan=2 align="center">
+			    <input type="Reset" value="Clear" >&nbsp;&nbsp;&nbsp;
+			    <input type="submit" onclick="return check(this.form)" value="Login">
+            </td>
+		</tr>
+		<tr>
+			<td colspan=2>&nbsp;</td>
 		</tr>
 	</table>
 </form>

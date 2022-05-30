@@ -15,9 +15,9 @@
 		
 		  <!-- Header -->
 		  <header class="w3-row w3-xlarge">
-		   <div class="w3-panel w3-cyan">
+		   <div class="w3-panel w3-cyan w">
 			  <h1><b>WealthPlan</b></h1>
-			</div> 
+			</div>
 		  </header>
 	  
 		  <div class="w3-row">

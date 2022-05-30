@@ -18,12 +18,11 @@
 </div>
 
 
-
-<% 
-GoalInfo data = (GoalInfo) request.getAttribute("mainData"); 
+<%
+GoalInfo data = (GoalInfo) request.getAttribute("mainData");
 %>
 
-	<form name="myForm" method="post" action="WmInvestmentAdd?action=investmentAdd">
+	<form name="myForm" method="post" action="WmInvestmentAdd/investmentAdd?goalId=<%=data.getId()%>">
 
 	<br>
 
@@ -42,7 +41,7 @@ GoalInfo data = (GoalInfo) request.getAttribute("mainData");
 		
 		<tr>
 			<td width="200">Investment Amount:</td>
-			<td><input type="text" size=25 name="investmentAmount"></td>
+			<td><input type="text" size=25 name="investmentAmountString"></td>
 		</tr>
 		<tr>
 			<td colspan=2>&nbsp;</td>

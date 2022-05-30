@@ -2,7 +2,6 @@ package com.pro.wealth.controller.wealthmanager;
 
 import java.util.List;
 
-import com.pro.wealth.common.NumberUtil;
 import com.pro.wealth.model.WcCustomer;
 import com.pro.wealth.service.CustomerService;
 import com.pro.wealth.service.GoalService;
@@ -40,17 +39,23 @@ public class WmFinancialPlanListController {
         return commonSteps(model, customerId);
     }
 
+
     @RequestMapping(value="/WmFinancialPlanList/deleteGoal", method = RequestMethod.GET)
     public String deleteGoal(ModelMap model, @RequestParam int goalId, HttpServletRequest request){
+
         int customerId = (int) request.getSession().getAttribute("customerId");
 
         goalService.delete(goalId);
+
         return commonSteps(model, customerId);
     }
 
     @RequestMapping(value="/WmFinancialPlanList", method = RequestMethod.GET)
     public String load(ModelMap model, HttpServletRequest request){
+        System.out.println("1 -------- customerId : " );
+
         int customerId = (int) request.getSession().getAttribute("customerId");
+        System.out.println("2 -------- customerId : " + customerId);
 
         return commonSteps(model, customerId);
     }

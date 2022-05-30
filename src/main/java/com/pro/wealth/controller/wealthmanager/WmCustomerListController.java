@@ -23,4 +23,3 @@ public class WmCustomerListController {
         return "wm/wm_cus_list";
     }
 }
-

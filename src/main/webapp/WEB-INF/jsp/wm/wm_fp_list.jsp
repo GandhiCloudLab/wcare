@@ -69,10 +69,13 @@ List<GoalInfo> list = (List<GoalInfo>) request.getAttribute("mainData");
 
 <script>
 function onSelectGoalAdd() {
-	//window.location = "/WmFinancialPlanAdd";
+	window.location = "/WmFinancialPlanAdd";
 }
 function onSelectGoalDelete(id) {
-	//window.location = "/WmFinancialPlanList?action=deleteGoal&goalId=" + id;
+    var result = confirm("Are you sure to delete this Goal?");
+    if (result) {
+        window.location = "/WmFinancialPlanList/deleteGoal?goalId=" + id;
+    }
 }
 function onSelectGoalDetail(id) {
 	window.location = "/WmFinancialPlanDetail?goalId=" + id;

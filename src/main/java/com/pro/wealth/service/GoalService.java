@@ -38,20 +38,20 @@ public class GoalService {
         return result;
     }
 
-    public GoalInfo delete(int goalId) {
+    public boolean delete(int goalId) {
         LogUtil.log("GoalService  delete Started ");
 
-        GoalInfo result = (GoalInfo) wcGoalService.delete (goalId);
+         wcGoalService.delete (goalId);
 
-        LogUtil.log("GoalService  delete Completed : " + result);
+        LogUtil.log("GoalService  delete Completed ");
 
-        return result;
+        return true;
     }
 
-    public GoalInfo create(WcGoal wcGoal) {
+    public Object create(WcGoal wcGoal) {
         LogUtil.log("GoalService  create Started ");
 
-        GoalInfo result = (GoalInfo) wcGoalService.create (wcGoal);
+        Object result = wcGoalService.create (wcGoal);
 
         LogUtil.log("GoalService  create Completed : " + result);
 

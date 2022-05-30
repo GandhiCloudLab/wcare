@@ -25,4 +25,14 @@ public class InvestmentService {
 
         return result;
     }
+
+    public boolean delete(int investmentId) {
+        LogUtil.log("InvestmentService  delete Started ");
+
+        wcInvestmentService.delete (investmentId);
+
+        LogUtil.log("InvestmentService  delete Completed ");
+
+        return true;
+    }
 }

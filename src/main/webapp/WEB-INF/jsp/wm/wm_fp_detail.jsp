@@ -30,8 +30,7 @@
 			
 		</tr>
 	</table>
-	
-	
+
 	<h4>GOAL # <%=data.getGoalReference()%> : <%=data.getGoalDesc()%></h4>
 	<%=data.getGoalAchievementString()%>
 			
@@ -66,6 +65,7 @@
 	        <th>Mutual funds</th>
 	        <th>Fixed Deposit</th>
 	        <th>Current Value</th>
+            <th>Delete</th>
 	      </tr>
 	    </thead>
 			<%
@@ -81,7 +81,8 @@
 						<td><%=investmentInfo.getMutualFundAmount()%>  <BR>(<%=investmentInfo.getCurrentValueMutualFundAmountString()%>)</td>
 						<td><%=investmentInfo.getFixedDepositAmount()%>  <BR>(<%=investmentInfo.getCurrentValueFixedDepositAmountString()%>)</td>
 						<td><%=investmentInfo.getCurrentValueTotalString()%>  <BR><%=investmentInfo.getCurrentValueTotalComments()%></td>
-						
+    					<td><button onclick="onSelectDeleteInvestment(<%=data.getId()%>, <%=investmentInfo.getId()%>)">Delete</button></td>
+
 					</tr>
 			<%
 				}
@@ -94,22 +95,25 @@
 
 <script>
 function onSelectAddInvestment(id) {
- // window.location = "WmInvestmentAdd?goalId=" + id;
+    window.location = "/WmInvestmentAdd?goalId=" + id;
 }
 function onSelectBack() {
-	  window.location = "WmFinancialPlanList";
+	  window.location = "/WmFinancialPlanList";
 }
 function onSelectDeleteGoal(id) {
-	 // window.location = "WmFinancialPlanList?action=deleteGoal&goalId=" + id;
+     window.location = "/WmFinancialPlanList/deleteGoal?goalId=" + id;
+}
+function onSelectDeleteInvestment(goalId, investmentId) {
+    window.location = "/WmFinancialPlanDetail/deleteInvestment?goalId=" + goalId + "&investmentId=" + investmentId;
 }
 function onSelectCustomer() {
-	  window.location = "WmCustomerList";
+	  window.location = "/WmCustomerList";
 }
 
 function onSelectPortfolio() {
-	  window.location = "WmPortfolioList";
+	  window.location = "/WmPortfolioList";
 }
 function onSelectProfile() {
-	  window.location = "WmProfileList";
+	  window.location = "/WmProfileList";
 }
 </script>

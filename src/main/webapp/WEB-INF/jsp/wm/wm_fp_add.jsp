@@ -16,14 +16,14 @@
   <h5><b>Add Goal </b></h5>
 </div>
 
-	<form name="myForm" method="post" action="WmFinancialPlanAdd?action=goalAdd">
+	<form name="myForm" method="post" action="WmFinancialPlanAdd/goalAdd">
 
 	<br>
 
 	<table width="40%" bgcolor="f2f3f4" align="center">
 		<tr>
 			<td colspan=2>&nbsp;</td>
-		</tr>	
+		</tr>
 		<tr>
 			<td width="200">Goal Reference:</td>
 			<td><input type="text" size=25 name="goalReference"></td>
@@ -42,18 +42,18 @@
 		</tr>
 		<tr>
 			<td colspan=2>&nbsp;</td>
-		</tr>	
+		</tr>
 		<tr>
 			<td colspan=2 align="center">
-				<button onclick="onSelectSave()">Save</button> 
+				<button onclick="onSelectSave()">Save</button>
 				<button onclick="onSelectCancel()">Cancel</button>
 			</td>
 		</tr>
-	
+
 	</table>
-	
-	
-<jsp:include page="../common/common_footer.jsp" /> 
+
+
+<jsp:include page="../common/common_footer.jsp" />
 
 
 

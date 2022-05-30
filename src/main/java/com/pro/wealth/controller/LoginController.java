@@ -56,6 +56,7 @@ public class LoginController {
             nextPage = "WmCustomerList";
             userDisplayText = "Welath Manager : " + loginInfo.getUserDisplayName();
             model.put("wealthManagerId", NumberUtil.stringToInt(loginInfo.getUserDisplayId()));
+            request.getSession().setAttribute("wealthManagerId", NumberUtil.stringToInt(loginInfo.getUserDisplayId()));
         } else {
             request.getSession().setAttribute("customerId", NumberUtil.stringToInt(loginInfo.getUserDisplayId()));
             nextPage = "CusFinancialPlanList";
